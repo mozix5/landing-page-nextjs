@@ -4,7 +4,7 @@ import React from "react";
 
 type IconLabelProps = {
   icon: string;
-  label: string;
+  label?: string;
 };
 const IconLabel = ({ icon, label }: IconLabelProps) => {
   return (
