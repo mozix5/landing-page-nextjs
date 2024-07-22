@@ -42,7 +42,9 @@ export default function RootLayout({
         {appDevStages}
         {team}
         {faq}
-        <Footer />
+        <div className="mb-8 bg-white">
+          <Footer />
+        </div>
       </body>
     </html>
   );
