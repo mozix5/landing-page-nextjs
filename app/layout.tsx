@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/navbar/Navbar";
+import Navbar from "./components/Navbar";
 import ContactBanner from "./components/ContactBanner";
 import Footer from "./components/Footer";
 const inter = Inter({ subsets: ["latin"] });
@@ -42,7 +42,7 @@ export default function RootLayout({
         {appDevStages}
         {team}
         {faq}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
