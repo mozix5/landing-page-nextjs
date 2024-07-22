@@ -1,5 +1,5 @@
 import React from "react";
-import ContactCard from "../components/navbar/ContactCard";
+import ContactCard from "../components/ContactCard";
 
 const HomeSection = () => {
   return (

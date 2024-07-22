@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
+import ContactBanner from "./components/ContactBanner";
+import Footer from "./components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -13,9 +15,17 @@ export default function RootLayout({
   children,
   projects,
   home,
+  appDevStages,
+  devCycle,
+  faq,
+  team,
 }: {
   children: React.ReactNode;
   projects: React.ReactNode;
+  appDevStages: React.ReactNode;
+  devCycle: React.ReactNode;
+  faq: React.ReactNode;
+  team: React.ReactNode;
   home: React.ReactNode;
 }) {
   return (
@@ -26,7 +36,13 @@ export default function RootLayout({
           {children}
           {home}
         </div>
-        <div className=" h-[100vh]">{projects}</div>
+        {devCycle}
+        {projects}
+        <ContactBanner />
+        {appDevStages}
+        {team}
+        {faq}
+        <Footer/>
       </body>
     </html>
   );
