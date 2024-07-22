@@ -38,6 +38,7 @@ const DevCycleSection = () => {
           {devItems.map((item) => {
             return (
               <NavButton
+                key={item.label}
                 label={item.label}
                 href={item.href}
                 mode={2}
