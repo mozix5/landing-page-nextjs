@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <div className="flex justify-between mx-20 bg-white h-20 items-center px-8 rounded-2xl shadow z-40">
       <div>
-        <Image src={logo} alt="logo"/>
+        <Image src={logo} alt="logo" />
       </div>
       <div className="flex space-x-4">
         {navItems.map((item, index) => (
@@ -29,13 +29,13 @@ const Navbar = () => {
           label="+92 9929359595"
           href="tel:+929929359595"
           icon={phone}
-          color="text-moss-green"
+          className="text-moss-green"
         />
         <NavButton
           label="mosinmd827@gmail.com"
           href="mailto:mosinmd827@gmail.com"
           icon={mail}
-          color="text-moss-green"
+          className="text-moss-green"
         />
       </div>
     </div>
