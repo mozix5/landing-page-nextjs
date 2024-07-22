@@ -34,11 +34,11 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
         <p className="mt-8 text-gray-600">{description}</p>
         <p className="mt-8 font-medium">{services}</p>
         <div className="mt-8 flex items-center space-x-16">
-          <span className="flex items-center space-x-1">
+          <span className="flex items-center space-x-3">
             <Image src={loc} alt="btn" />
             <span className=" font-medium">{location}</span>
           </span>
-          <span className="flex items-center space-x-1">
+          <span className="flex items-center space-x-4">
             <Image src={bag} alt="btn" />
             <span className=" font-medium">{industry}</span>
           </span>
