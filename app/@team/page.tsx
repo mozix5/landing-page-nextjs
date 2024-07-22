@@ -27,7 +27,7 @@ const TeamSection = () => {
         </div>
         <p className=" font-medium">
           All the necessary specialists - from a designer to a tester - are on
-          our staff. We hire the best specialists in the market. It's expensive
+          our staff. We hire the best specialists in the market. It&apos;s expensive
           but worth it
         </p>
       </div>
