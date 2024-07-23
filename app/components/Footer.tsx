@@ -6,43 +6,63 @@ import phone from "@/public/svg/mobilegray.svg";
 import mail from "@/public/svg/mailgray.svg";
 import doc from "@/public/svg/document_outline_24.svg";
 import place from "@/public/svg/placegray.svg";
+
+type FooterSectionProps = {
+  iconSrc: string;
+  altText: string;
+  title: string;
+  content: string;
+};
+
+const FooterSection = ({
+  iconSrc,
+  altText,
+  title,
+  content,
+}: FooterSectionProps) => {
+  return (
+    <div className="flex flex-col gap-1 bg-black">
+      <div className="flex items-center gap-2 text-[#98A2B3]">
+        <Image src={iconSrc} alt={altText} />
+        <h3 className="text-sm">{title}</h3>
+      </div>
+      <p className="text-sm">{content}</p>
+    </div>
+  );
+};
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-8 mx-20 rounded-xl">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div className=" col-span-4 justify-center flex">
+    <footer className="bg-black text-white py-8 md:mx-8 lg:mx-20 mx-4 rounded-2xl shadow-lg">
+      <div className="container grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div className="md:col-span-4 justify-center flex">
           <Image src={logo} alt="Company Logo" />
         </div>
-        <div className="flex flex-col gap-2 bg-gray-900">
-          <div className=" flex items-center gap-2 text-[#98A2B3]">
-            <Image src={phone} alt="Phone" />
-            <h3 className="">Contact nums</h3>
-          </div>
-          <p>+91 0000000000</p>
-        </div>
-        <div className="flex flex-col gap-2 bg-gray-900">
-          <div className=" flex items-center gap-2 text-[#98A2B3]">
-            <Image src={mail} alt="mail" />
-            <h3 className="">Gmail</h3>
-          </div>
-          <p>mosinmd827@gmail.com</p>
-        </div>
-        <div className="flex flex-col gap-2 bg-gray-900">
-          <div className=" flex items-center gap-2 text-[#98A2B3]">
-            <Image src={place} alt="place" />
-            <h3 className="">Address</h3>
-          </div>
-          <p>Mumbai, India</p>
-        </div>
-        <div className="flex flex-col gap-2 bg-gray-900">
-          <div className=" flex items-center gap-2 text-[#98A2B3]">
-            <Image src={doc} alt="document" />
-            <h3 className="">Leave a request</h3>
-          </div>
-          <p>Leave a request</p>
-        </div>
+        <FooterSection
+          iconSrc={phone}
+          altText="Phone"
+          title="Contact nums"
+          content="+91 0000000000"
+        />
+        <FooterSection
+          iconSrc={mail}
+          altText="Mail"
+          title="Gmail"
+          content="abc@gmail.com"
+        />
+        <FooterSection
+          iconSrc={place}
+          altText="Place"
+          title="Address"
+          content="Mumbai, India"
+        />
+        <FooterSection
+          iconSrc={doc}
+          altText="Document"
+          title="Leave a request"
+          content="Leave a request"
+        />
       </div>
-      <div className="mt-14 text-sm text-center text-[#98A2B3]">
+      <div className="mt-8 text-sm text-center text-[#98A2B3]">
         <p>We work throughout the world</p>
       </div>
     </footer>

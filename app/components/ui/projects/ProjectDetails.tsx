@@ -63,7 +63,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
         </div>
       </div>
       <div
-      className="lg:w-1/3 object-cover h-[50vh] w=[40vw]"
+      className="lg:w-1/3 object-cover flex justify-center"
       >
         <Image src={imgSrc} alt="project" width={600} height={900}/>
       </div>

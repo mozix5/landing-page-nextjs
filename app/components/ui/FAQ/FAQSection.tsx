@@ -1,4 +1,3 @@
-// components/FAQSection.tsx
 import React from "react";
 import FAQItem from "./FAQItem";
 
@@ -23,11 +22,11 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <div className=" p-20 bg-white">
+    <div className="md:p-8 lg:p-20 p-4 py-6 bg-white">
       <h1>FAQ</h1>
-      <div className="grid grid-cols-2 gap-8 mt-12">
+      <div className="grid lg:grid-cols-2 gap-8 mt-12">
         {faqs.map((faq, index) => (
-          <FAQItem key={index} question={faq.question} answer={faq.answer} />
+          <FAQItem key={index} value={`item-${index}`} question={faq.question} answer={faq.answer} />
         ))}
       </div>
     </div>

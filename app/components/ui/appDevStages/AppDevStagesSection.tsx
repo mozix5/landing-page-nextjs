@@ -47,11 +47,11 @@ const stages = [
   },
 ];
 
-const AppDevStages = () => {
+const AppDevStagesSection = () => {
   return (
-    <div className="p-20 bg-white">
+    <div className="md:p-8 lg:p-20 p-4 bg-white">
       <h1>Application Development Stages</h1>
-      <div className=" grid grid-flow-col content-evenly grid-rows-3 justify-center items-center gap-4 mt-12">
+      <div className=" grid lg:grid-flow-col content-evenly grid-rows-3 justify-center items-center gap-4 my-8 lg:mt-12">
         {stages.slice(0, 3).map((stage, index) => (
           <DevelopmentStageCard
             key={index}
@@ -60,7 +60,7 @@ const AppDevStages = () => {
             description={stage.description}
           />
         ))}
-        <div className=" row-span-3 w-[33vw] flex justify-center h-full">
+        <div className=" lg:row-span-3 lg:w-[33vw] flex justify-center h-full">
           <Image src={phone} alt="phone" />
         </div>
         {stages.slice(3, 6).map((stage, index) => (
@@ -76,4 +76,4 @@ const AppDevStages = () => {
   );
 };
 
-export default AppDevStages;
+export default AppDevStagesSection;

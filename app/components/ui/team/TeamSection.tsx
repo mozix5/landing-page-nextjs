@@ -4,24 +4,24 @@ import fam from "@/public/svg/frame625882.svg";
 
 const TeamSection = () => {
   return (
-    <div className="m-20 flex gap-6">
+    <div className="md:m-8 lg:m-20 m-4 my-8 flex flex-col lg:flex-row gap-6">
       <div className="flex-1 flex flex-col space-y-12 mr-6">
         <h1>Our Team</h1>
         <p className=" font-medium">
           Thousand is a full-cycle digital production company with its own
           product analytics, design, web and mobile development.
         </p>
-        <div className=" flex space-x-12">
+        <div className=" flex justify-between lg:space-x-12">
           <div>
-            <h3 className="text-5xl font-bold">28</h3>
+            <h3 className="lg:text-5xl text-2xl font-bold">28</h3>
             <p className="text-gray-500 text-base mt-2">User Growth</p>
           </div>
           <div>
-            <h3 className="text-5xl font-bold">+100</h3>
+            <h3 className="lg:text-5xl text-2xl font-bold">+100</h3>
             <p className="text-gray-500 text-base mt-2">Active Users</p>
           </div>
           <div>
-            <h3 className="text-5xl font-bold">7 years</h3>
+            <h3 className="lg:text-5xl text-2xl font-bold">7 years</h3>
             <p className="text-gray-500 text-base mt-2">Active Users</p>
           </div>
         </div>
@@ -31,7 +31,7 @@ const TeamSection = () => {
           but worth it
         </p>
       </div>
-      <div className="flex-1">
+      <div className="flex-1 object-cover">
         <Image src={fam} alt="photo" />
       </div>
     </div>

@@ -1,5 +1,4 @@
-"use client";
-import React, { useState } from "react";
+import React from "react";
 import {
   Accordion,
   AccordionContent,
@@ -14,8 +13,6 @@ type FAQItemProps = {
 };
 
 const FAQItem = ({ question, answer, value }: FAQItemProps) => {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <Accordion type="single" collapsible>
       <AccordionItem value={value}>

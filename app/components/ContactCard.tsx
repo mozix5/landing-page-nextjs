@@ -21,7 +21,7 @@ const ContactCard = ({ className, mode, heading }: Props) => {
   return (
     <Card
       className={`max-w-3xl p-6 shadow-lg rounded-lg bg-white ${
-        mode === 2 && "flex items-end space-x-6"
+        mode === 2 && "md:flex items-end space-x-6"
       }`}
     >
       <div>
@@ -30,7 +30,7 @@ const ContactCard = ({ className, mode, heading }: Props) => {
             {heading}
           </CardTitle>
         </CardHeader>
-        <CardContent className="grid grid-cols-2 gap-6">
+        <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <Label htmlFor="fullName">Full name</Label>
             <Input
@@ -73,7 +73,7 @@ const ContactCard = ({ className, mode, heading }: Props) => {
           </div>
         </CardContent>
       </div>
-      <CardFooter className="flex justify-end">
+      <CardFooter className="flex justify-end mt-6 lg:mt-0">
         <Button className={`text-white ${className}`}>Get consultation</Button>
       </CardFooter>
     </Card>

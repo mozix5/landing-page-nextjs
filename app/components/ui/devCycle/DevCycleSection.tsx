@@ -1,6 +1,6 @@
 import React from "react";
-import BrandsBanner from "../components/BrandsBanner";
-import NavButton from "../components/NavButton";
+import BrandsBanner from "../../BrandsBanner";
+import NavButton from "../../NavButton";
 import right from "@/public/svg/chevron_right_small_24.svg";
 const devItems = [
   { label: "iOS development", href: "/#" },
@@ -13,10 +13,10 @@ const devItems = [
 ];
 const DevCycleSection = () => {
   return (
-    <div className="p-12">
+    <div className="md:p-8 lg:p-20 p-4 bg-white">
       <BrandsBanner />
-      <div className="mx-8 flex mt-8">
-        <div className=" w-1/2 pr-32 flex flex-col gap-6">
+      <div className=" flex flex-col lg:flex-row mt-8">
+        <div className=" lg:w-1/2 lg:pr-32 flex flex-col gap-6">
           <h1 className=" text-4xl font-bold py-1">Full Development Cycle</h1>
           <p className=" font-semibold">We use proven technologies</p>
           <div>
@@ -34,7 +34,7 @@ const DevCycleSection = () => {
             </p>
           </div>
         </div>
-        <div className=" flex flex-col items-start hover:font-semibold pl-24">
+        <div className=" flex flex-col items-start hover:font-semibold lg:pl-24 my-6 lg:my-0">
           {devItems.map((item) => {
             return (
               <NavButton
@@ -43,7 +43,7 @@ const DevCycleSection = () => {
                 href={item.href}
                 mode={2}
                 icon={right}
-                className="py-6 gap-2"
+                className="py-6 gap-2 px-0"
                 variant="customLink"
               />
             );

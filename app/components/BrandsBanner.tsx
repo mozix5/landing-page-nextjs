@@ -12,7 +12,7 @@ const brands = [
 ];
 const BrandsBanner = () => {
   return (
-    <div className=" py-14 border-t-2 border-b-2">
+    <div className=" py-14 border-t-2 border-b-2 overflow-scroll">
       <div className="flex justify-between">
         {brands.map((brand, i) => {
           return <Image key={i} src={brand.logo} alt="brand" />;

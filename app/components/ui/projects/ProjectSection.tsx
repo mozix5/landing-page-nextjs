@@ -1,5 +1,5 @@
 import React from "react";
-import IconLabel from "../components/IconLabel";
+import IconLabel from "../../IconLabel";
 import ProjectShowCase from "./ProjectShowCase";
 import ar from "@/public/svg/ar.svg";
 import bag from "@/public/svg/bag.svg";
@@ -34,10 +34,10 @@ const items = [
   { icon: play, label: "Online courses" },
 ];
 
-const Projects = () => {
+const ProjectSection = () => {
   return (
-    <div className="m-20">
-      <div className=" font-bold text-4xl leading-snug">
+    <div className="md:m-8 lg:m-20 m-4">
+      <div className=" font-bold text-4xl leading-snug text-center">
         <h1>
           Developed more than <span className=" text-moss-green">100</span>
         </h1>
@@ -45,13 +45,13 @@ const Projects = () => {
           projects in <span className=" text-moss-green">15</span> industries
         </h1>
       </div>
-      <div className=" grid grid-flow-row gap-4 my-6 grid-cols-3">
+      <div className=" grid grid-flow-row gap-4 my-6 md:grid-cols-2 lg:grid-cols-3">
         {items.map((item, index) => (
           <IconLabel key={index} icon={item.icon} label={item.label} />
         ))}
       </div>
-      <div className=" mt-20">
-        <div className="w-1/2">
+      <div className=" mt-12 lg:mt-20">
+        <div className="lg:w-1/2">
           <h1>Projects we are proud of</h1>
           <p className="mt-6">
             Our software development company is truly proud of the wonderful
@@ -66,4 +66,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default ProjectSection;
